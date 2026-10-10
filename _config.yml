@@ -1,0 +1,59 @@
+# ------------------------------------------------------------
+# Site settings. Edit these, commit, and the site rebuilds.
+# ------------------------------------------------------------
+title: Sammy Goswami
+author: Saumojit (Sammy) Goswami
+description: >-
+  Trust & Safety practitioner moving into AI governance. Writing about
+  the human judgement behind automated systems.
+url: "https://sammylnx.github.io"
+baseurl: ""
+lang: en
+
+# Links shown in the footer and on the About page.
+# Leave a value empty ("") to hide that link.
+links:
+  github: "https://github.com/sammylnx"
+  linkedin: ""   # e.g. https://www.linkedin.com/in/your-handle
+  email: ""      # e.g. you@example.com
+
+# How many posts to show on the home page
+home_posts: 5
+
+# ------------------------------------------------------------
+# Build settings. You shouldn't need to touch anything below.
+# ------------------------------------------------------------
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+permalink: /:year/:month/:title/
+timezone: Asia/Kolkata
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+feed:
+  path: feed.xml
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: page
+
+exclude:
+  - README.md
+  - HOW_TO_POST.md
+  - Gemfile
+  - Gemfile.lock
+  - preview/
+  - vendor/

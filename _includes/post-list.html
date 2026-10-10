@@ -1,0 +1,16 @@
+{% assign list = include.posts %}
+{% if list.size > 0 %}
+<ol class="post-list" reversed>
+  {% for post in list %}
+  <li>
+    <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-d %b %Y" }}</time>
+    <div>
+      <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      {% if post.description %}<p>{{ post.description }}</p>{% endif %}
+    </div>
+  </li>
+  {% endfor %}
+</ol>
+{% else %}
+<p class="empty">Nothing published yet. The first post is on its way.</p>
+{% endif %}

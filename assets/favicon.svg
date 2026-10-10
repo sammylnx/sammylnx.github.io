@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+  <style>
+    .r { fill: none; stroke: #1c2333; stroke-width: 4; stroke-linecap: round; }
+    @media (prefers-color-scheme: dark) { .r { stroke: #e4e7ee; } }
+  </style>
+  <circle class="r" cx="24" cy="24" r="17" pathLength="100" stroke-dasharray="88 12" stroke-dashoffset="19"/>
+  <circle cx="24" cy="7" r="5.5" fill="#e39b12"/>
+</svg>

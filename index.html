@@ -1,0 +1,23 @@
+---
+layout: default
+---
+<section class="hero" aria-labelledby="hero-title">
+  {% include loop-mark.html class="loop-mark--hero" %}
+  <div class="hero-text">
+    <h1 id="hero-title">I spent four and a half years as the human judgement behind an automated system.</h1>
+    <p>Now I'm working out where that judgement belongs in the AI that comes next. I'm Sammy, a Trust &amp; Safety practitioner in Kolkata moving into AI governance, and this is where I think out loud.</p>
+    <p class="hero-links">
+      <a href="{{ '/about/' | relative_url }}">More about me</a>
+      <a href="{{ '/blog/' | relative_url }}">Read the writing</a>
+    </p>
+  </div>
+</section>
+
+<section class="recent" aria-labelledby="recent-title">
+  <h2 id="recent-title">Recent writing</h2>
+  {% assign recent = site.posts | slice: 0, site.home_posts %}
+  {% include post-list.html posts=recent %}
+  {% if site.posts.size > site.home_posts %}
+  <p class="more"><a href="{{ '/blog/' | relative_url }}">All {{ site.posts.size }} posts</a></p>
+  {% endif %}
+</section>

@@ -1,0 +1,9 @@
+<footer class="site-footer">
+  <p>Written in Kolkata by {{ site.author }}.</p>
+  <ul class="footer-links">
+    {% if site.links.email != "" and site.links.email %}<li><a href="mailto:{{ site.links.email }}">Email</a></li>{% endif %}
+    {% if site.links.linkedin != "" and site.links.linkedin %}<li><a href="{{ site.links.linkedin }}">LinkedIn</a></li>{% endif %}
+    {% if site.links.github != "" and site.links.github %}<li><a href="{{ site.links.github }}">GitHub</a></li>{% endif %}
+    <li><a href="{{ '/feed.xml' | relative_url }}">RSS</a></li>
+  </ul>
+</footer>

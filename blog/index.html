@@ -1,0 +1,21 @@
+---
+layout: default
+title: Writing
+description: Notes on trust & safety, AI governance, and the people who sit between written policy and automated systems.
+---
+<header class="page-head">
+  <h1>Writing</h1>
+  <p class="lede">{{ page.description }}</p>
+</header>
+
+{% if site.posts.size > 0 %}
+  {% assign years = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+  {% for year in years %}
+  <section class="year" aria-labelledby="y{{ year.name }}">
+    <h2 id="y{{ year.name }}">{{ year.name }}</h2>
+    {% include post-list.html posts=year.items %}
+  </section>
+  {% endfor %}
+{% else %}
+  {% include post-list.html posts=site.posts %}
+{% endif %}
