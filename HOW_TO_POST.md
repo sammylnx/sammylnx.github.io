@@ -41,4 +41,4 @@ Click **Commit changes**. The site rebuilds by itself and the post appears in ab
 - **Add an image:** upload it to `assets/images` (create the folder the first time), then use `![description](/assets/images/file-name.jpg)` in the post.
 - **Edit the About page:** `about.md`.
 - **Add your LinkedIn or email:** fill them in under `links:` in `_config.yml`.
-- **See whether a build worked:** the **Actions** tab on GitHub shows a green tick or a red cross for each change.
+- **See whether a build worked:** the **Actions** tab on GitHub shows a green tick or a red cross for each change (the run is called "pages-build-deployment").

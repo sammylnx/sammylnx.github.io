@@ -7,4 +7,4 @@ Personal site and blog of Saumojit (Sammy) Goswami, built with Jekyll and publis
 - **About page:** `about.md`
 - **Look and feel:** `assets/css/style.css` (colours are at the top)
 
-Every push to `main` rebuilds the site through `.github/workflows/pages.yml`.
+Every push to `main` rebuilds the site automatically (GitHub Pages builds Jekyll from the branch).
